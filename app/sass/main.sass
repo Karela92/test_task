@@ -1,0 +1,271 @@
+@import 'smart-grid'
+@import 'fonts'
+@import 'vars'
+@import 'libs'
++reset()
+
+body
+  font-family: $default-font
+  background-color: #ffffff
+
+.main
+	+wrapper()
+	max-width: 1800px
+	min-width: 340px
+	position: relative
+	margin: 0 auto
+
+.header
+	position: relative
+	color: white
+	&:before
+		content: ''
+		position: absolute
+		background-image: url(../img/hopa.png)
+		background-size: cover
+		z-index: 0
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+	&__background
+		padding-top: 23px
+		background-color: rgba(25,38,63, .8)
+		position: relative
+		z-index: 1
+		
+	&__logo
+		+row-flex()
+		padding: 0
+		margin: 0
+		text-transform: uppercase
+		font-family: Arial
+		font-size: 22.9px
+		&__comp
+			color: #287ec2
+			font-weight: 700
+			padding-left: 5px
+		&__name
+			color: #8dc63f
+			font-weight: 400
+			padding-left: 5px
+			margin-top: 13px
+			display: inline-block
+	&__menu
+		float: left
+		margin-left: 37px
+		padding-top: 17px
+		ul
+			display: inline-block
+			li
+				color: white
+				list-style: none
+				display: inline-block
+				font-size: 16px
+				font-weight: 400
+				cursor: pointer
+				a
+					color: white
+					text-decoration: none
+					&:hover
+						color: wheat
+						border-bottom: 3px solid wheat
+						padding-bottom: 10px
+
+	&__menu__second__ul
+		margin-right: 0
+		margin-left: 83px
+		li:last-child
+			margin-left: 22px
+
+.header__top__wrap
+	+row-flex()
+	+justify-content(center)
+
+.header__menu__first__ul li:nth-child(2)
+	margin-left: 55px
+.header__menu__first__ul li:nth-child(3), .header__menu__first__ul li:nth-child(4)
+	margin-left: 42.5px
+
+.header h1
+	text-transform: uppercase
+	font-family: 'Open Sans'
+	text-align: center
+	margin-top: 100px
+	font-weight: 300
+	font-size: 48px
+	line-height: 48px
+	margin-bottom: 70px
+
+.header__discript
+	text-align: center
+	font-size: 18px
+	font-weight: 400
+	line-height: 30px
+	padding-bottom: 90px
+
+.content
+	+wrapper()
+	h6
+		color: #19263f
+		font-size: 20px
+		font-weight: 700
+		text-align: center
+		padding-top: 71px
+		padding-bottom: 42px
+	&__wrap
+		+row-flex()
+		+justify-content(center)
+		&__block
+			+col()
+			+col-4()
+			+col-md-6()
+			+col-xs-12()
+			display: flex
+			flex-direction: column
+			text-align: center
+			background-color: white
+			padding: 30px 15px
+			margin-top: 30px
+			&__img
+				padding-bottom: 30px
+				img
+					height: 65px
+			&__background
+				background-color: #fafafa
+			&__name
+				color: #19263f
+				font-size: 20px
+				font-weight: 700
+				padding-bottom: 22px
+				display: block
+
+.content__paragraph
+	color: black
+	font-weight: 400
+	line-height: 24px
+	font-size: 16px
+	text-align: left
+	margin-bottom: 45px
+.content__info
+	color: #010101
+	text-align: center
+	display: block
+	padding-bottom: 35px
+	
+.content__product__view
+	text-align: center
+	a
+		display: inline-block
+		text-align: center
+		border-radius: 3px
+		border: 1px solid #80b450
+		color: #19263f
+		font-size: 15px
+		font-weight: 400
+		text-decoration: none
+		padding: 15px 35px
+		margin-top: 50px
+		transition: all .75s
+		&:hover
+			background-color: #ccfffa
+
+.content__second__wrap__block__name__first
+	margin-top: 30px
+
+.content__first__wrap__block__discript
+	color: #333
+	text-align: left
+	font-size: 14px
+	font-weight: 400
+.content__first__wrap__block__learn
+	cursor: pointer
+	color: #1657ab
+	font-size: 15px
+	font-weight: 400
+	line-height: 36px
+	margin-top: auto
+	padding-top: 30px
+	span
+		transition: all .5s
+		&:hover
+			color: orange
+
+.content__second__wrap__block__discript
+	color: #333
+	text-align: center
+	font-size: 14px
+	font-weight: 400
+
+.content__block__sponsor
+	text-align: center
+	margin-bottom: 220px
+	img
+		margin-right: 30px
+		margin-bottom: 30px
+
+.footer
+	background-color: #19263f
+	color: white
+	padding-top: 48px
+	padding-bottom: 52px
+	&__about
+		text-align: center
+		li
+			display: inline-block
+			text-transform: uppercase
+			cursor: pointer
+			margin-right: 51px
+			color: #fafafa
+			font-size: 14px
+			&:hover
+						color: wheat
+			&:last-child
+				margin-right: 0
+	&__icons
+		text-align: center
+		padding-top: 36px
+		padding-bottom: 42px
+		li
+			display: inline-block
+			cursor: pointer
+			margin-right: 32px
+			color: #fafafa
+			border-radius: 50%
+			width: 54px
+			height: 54px
+			background-color: #3e495e
+			&:last-child
+				margin-right: 0
+			.fa
+				font-size: 24px
+				margin-top: 15px
+			&:hover
+				background-color: silver
+	span
+		display: block
+		text-align: center
+		font-size: 12px
+		margin-right: 20px
+
+.hamburger
+	position: absolute
+	right: 0
+	display: none
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	background-color: white
+	border-radius: 0
+	width: 36px
+	height: 2px
+
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview li
+	color: white
+	font-size: 18px
+	margin-bottom: 10px
+	&:hover
+		color: wheat
+
+
+
+
+@import 'media'

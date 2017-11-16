@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "PTSans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/PT Sans/PTSans-Regular.eot");
+  src: url("../fonts/PT Sans/PTSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PT Sans/PTSans-Regular.woff") format("woff"), url("../fonts/PT Sans/PTSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/OpenSans/OpenSans.eot");
+  src: url("../fonts/OpenSans/OpenSans.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans.woff") format("woff"), url("../fonts/OpenSans/OpenSans.ttf") format("truetype");
+}
